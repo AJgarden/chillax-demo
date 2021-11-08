@@ -20,9 +20,9 @@ ol, ul, li { margin: 0; padding: 0; list-style: none; }
 
 html { font-size: 16px; }
 
-body { line-height: 1.5; font-size: 1rem; font-family: sans-serif; overflow-x: hidden; }
+body { width: 100%; line-height: 1.5; font-size: 1rem; font-family: sans-serif; overflow-x: hidden; }
 
-.g-page-wrapper { position: relative; padding-top: 204px; }
+.g-page-wrapper { position: relative; padding-top: 204px; overflow: hidden; }
 
 @media (min-width: 1281px) and (max-width: 1680px) { .g-page-wrapper { padding-top: 180px; } }
 
