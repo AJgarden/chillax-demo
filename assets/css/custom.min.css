@@ -139,7 +139,11 @@
 
 @media (min-width: 1024px) and (max-width: 1680px) { .footer .footer-content .footer-content-gotop span.ghost { right: 30px; } }
 
+@media (max-width: 1023px) { .footer .footer-content .footer-content-gotop span.ghost { right: 0; } }
+
 .footer .footer-content .footer-content-gotop.scroll-view span.ghost { bottom: 20px; opacity: 1; }
+
+@media (max-width: 1023px) { .footer .footer-content .footer-content-gotop.scroll-view span.ghost { bottom: 0; } }
 
 .footer .footer-copyright { background: #cc8e67; padding: 275px 30px 30px; }
 
