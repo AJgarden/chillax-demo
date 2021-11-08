@@ -149,7 +149,7 @@
 
 .index-banner { position: relative; padding-bottom: 55px; }
 
-@media (min-width: 1024px) and (max-width: 1280px) { .index-banner { padding-bottom: 30px; } }
+@media (max-width: 1280px) { .index-banner { padding-bottom: 30px; } }
 
 .index-banner .index-banner-carousel { transition: all 1s; }
 
