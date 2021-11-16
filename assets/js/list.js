@@ -9,11 +9,11 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 // load more news
 var newsMore = $('.list-more-news');
 var newsList = $('.list-news');
-var times = 0;
+var newsTimes = 0;
 newsMore.on('click', function () {
   newsMore.attr('disabled', 'disabled'); // for example
 
-  var url = times < 3 ? '../assets/news_example.json' : '../assets/empty.json';
+  var url = newsTimes < 3 ? '../assets/news_example.json' : '../assets/empty.json';
   setTimeout(function () {
     $.ajax({
       url: url,
@@ -43,8 +43,49 @@ newsMore.on('click', function () {
         }
       },
       complete: function complete() {
-        times++;
+        newsTimes++;
         if (newsMore) newsMore.removeAttr('disabled');
+      }
+    });
+  }, 1500);
+}); // load more class
+
+var classMore = $('.list-more-class');
+var classList = $('.list-class');
+var classTimes = 0;
+classMore.on('click', function () {
+  classMore.attr('disabled', 'disabled'); // for example
+
+  var url = classTimes < 3 ? '../assets/class_example.json' : '../assets/empty.json';
+  setTimeout(function () {
+    $.ajax({
+      url: url,
+      success: function success(data) {
+        if (data) {
+          var html = '';
+
+          var _iterator2 = _createForOfIteratorHelper(data),
+              _step2;
+
+          try {
+            for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+              var item = _step2.value;
+              html += "<li class=\"list-class-item\">\n              <a href=\"".concat(item.url, "\" title=\"").concat(item.title, "\">\n                ").concat(item.tag !== null && "<span class=\"list-class-item-tag\" style=\"background-color: ".concat(item.tag.color, ";\">").concat(item.tag.text, "</span>"), "\n                <div class=\"list-class-item-img\">\n                  <img src=\"").concat(item.img, "\" alt=\"\" />\n                </div>\n                <h3 class=\"list-class-item-title\">").concat(item.title, "</h3>\n                <div class=\"list-class-item-ranking g-flex-wrapper g-flex-align-center\">\n                  <span>").concat(item.rank.score, "</span>\n                  <div class=\"list-class-item-ranking-stars\" data-stars=\"").concat(item.rank.stars, "\" />\n                  <span>(").concat(item.rank.comments, ")</span>\n                </div>\n                <p class=\"list-class-item-info\">\u8AB2\u7A0B\u6642\u9593 ").concat(item.course.duration, " \u5206\u9418 | \u4E0A\u8AB2\u4EBA\u6578 ").concat(item.course.attendees, " \u4EBA</p>\n                <div class=\"list-class-item-footer g-flex-wrapper g-flex-align-end g-flex-justify-space-between\">\n                  <div class=\"list-class-item-lecturer g-flex-wrapper g-flex-align-start\">\n                    <div class=\"list-class-item-lecturer-img\">\n                      <img src=\"").concat(item.lecturer.img, "\" alt=\"").concat(item.lecturer.name, "\" />\n                    </div>\n                    <div class=\"list-class-item-lecturer-info\">\n                      <p class=\"list-class-item-lecturer-name\">").concat(item.lecturer.name, "</p>\n                      <p class=\"list-class-item-lecturer-dept\">").concat(item.lecturer.department, "</p>\n                    </div>\n                  </div>\n                  <div class=\"list-class-item-price\">NT$").concat("".concat(item.price).replace(/\B(?=(\d{3})+(?!\d))/g, ','), "</div>\n                </div>\n              </a>\n            </li>");
+            }
+          } catch (err) {
+            _iterator2.e(err);
+          } finally {
+            _iterator2.f();
+          }
+
+          classList.append(html);
+        } else {
+          classMore.remove();
+        }
+      },
+      complete: function complete() {
+        classTimes++;
+        if (classMore) classMore.removeAttr('disabled');
       }
     });
   }, 1500);

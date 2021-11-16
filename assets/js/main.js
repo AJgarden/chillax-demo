@@ -39,7 +39,9 @@ goTop.scrollView({
   endKey: 'top',
   threshold: 0,
   repeat: true
-}); // demo validation
+}); // tooltip
+
+$('[data-toggle="tooltip"]').tooltip(); // demo validation
 
 var cookies = document.cookie.split(';');
 
