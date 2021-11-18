@@ -26,7 +26,15 @@
     <header class="header">
       <div class="header-wrapper g-flex-wrapper g-flex-align-center g-flex-justify-space-between">
         <h1 class="header-logo"><a href="/" title="chillax"><img src="assets/images/header-logo.png" alt="chillax"></a></h1>
-        <nav class="header-nav g-flex-wrapper g-flex-align-center"><a class="header-nav-item g-flex-wrapper g-flex-align-center" href="class_list.html" title="線上課程"><span class="header-nav-item-icon"><img src="assets/images/header-icon-lesson.png" alt=""></span><span class="header-nav-item-text">線上課程</span></a><a class="header-nav-item g-flex-wrapper g-flex-align-center" href="" title="會員登入"><span class="header-nav-item-icon"><img src="assets/images/header-icon-member.png" alt=""></span><span class="header-nav-item-text">會員登入</span></a></nav>
+        <nav class="header-nav g-flex-wrapper g-flex-align-center"><a class="header-nav-item g-flex-wrapper g-flex-align-center" href="class_list.html" title="線上課程"><span class="header-nav-item-icon"><img src="assets/images/header-icon-lesson.png" alt=""></span><span class="header-nav-item-text">線上課程</span></a><a class="header-nav-item g-flex-wrapper g-flex-align-center" href="" title="我的課程"><span class="header-nav-item-icon"><img src="assets/images/header-icon-member.png" alt=""></span><span class="header-nav-item-text">我的課程</span></a>
+          <div class="dropdown"><button class="btn btn-default dropdown-toggle" type="button" id="account-login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="assets/images/del/d-account-image.jpg" alt=""><span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="account-login">
+              <li class="active"><a href="#" title="帳號設定">帳號設定</a></li>
+              <li><a href="#" title="我的課程">我的課程</a></li>
+              <li><a href="#" title="登出">登出</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
       <div class="header-scroll-dispatcher"></div>
     </header>
@@ -37,7 +45,6 @@
             <div class="class-detail-content-video"><iframe width="560" height="315" src="https://www.youtube.com/embed/5oXvF1Wam7k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
             <div class="class-detail-content-info">
               <h2 class="class-detail-content-title">五星主廚帶你做!! | 不藏私義大利私房菜</h2>
-              <div class="class-detail-content-price g-flex-inline-wrapper g-flex-align-center"><span class="tag" style="background-color: #ff0000;">早鳥優惠中</span><span class="price">NT$4,980</span></div>
               <div class="class-detail-content-ranking g-flex-wrapper g-flex-align-center"><span>5.0</span>
                 <div class="class-detail-content-ranking-stars" data-stars="5"></div><span>(3)</span>
               </div>
@@ -50,20 +57,20 @@
                   <p class="class-detail-content-lecturer-dept">Fourplay</p>
                 </div>
               </div>
-              <div class="class-detail-content-option"><a class="buy" href="class_purchase.html" title="立即購買">立即購買</a><a class="share" href="#" title="分享課程">分享課程</a></div>
+              <div class="class-detail-content-option"><a class="buy" href="" title="下載教學講義" download>下載教學講義</a><a class="comment" href="#" title="評論課程"><i class="fas fa-star"></i>評論課程</a><a class="share" href="#" title="分享課程">分享課程</a></div>
             </div>
           </div>
-          <div class="class-detail-content-section">
+          <div class="class-detail-content-section logged">
             <div class="class-detail-content-section-header g-flex-wrapper g-flex-align-center">
               <ul class="class-detail-content-section-tab g-flex-wrapper g-flex-align-center">
-                <li class="class-detail-content-section-tab-item" data-anchor="intro">課程簡介</li>
+                <li class="class-detail-content-section-tab-item active" data-anchor="intro">課程簡介</li>
                 <li class="class-detail-content-section-tab-item" data-anchor="lesson">課程章節</li>
                 <li class="class-detail-content-section-tab-item" data-anchor="faq">課前問答</li>
                 <li class="class-detail-content-section-tab-item" data-anchor="discuss">學習討論</li>
-              </ul><a class="class-detail-content-section-buy" href="class_purchase.html" title="購買課程">購買課程</a>
+              </ul>
             </div>
             <div class="class-detail-content-section-tabpane-wrapper">
-              <div class="class-detail-content-section-tabpane" data-target="intro">
+              <div class="class-detail-content-section-tabpane active" data-target="intro">
                 <div class="class-detail-content-section-editor">
                   <!-- {編輯器開始} --><img src="assets/images/del/d-class-detail-01.jpg" alt="" style="display: block; width: 100%;"><br><br>
                   <div style="padding-left: 7.69%; padding-right: 7.69%;">
@@ -81,39 +88,204 @@
               <div class="class-detail-content-section-tabpane" data-target="lesson">
                 <div class="class-detail-content-lesson">
                   <div class="class-detail-content-lesson-header g-flex-wrapper g-flex-align-start">
-                    <div class="class-detail-content-lesson-header-item">
-                      <p class="class-detail-content-lesson-header-item-title">單元</p>
-                      <p class="class-detail-content-lesson-header-item-content">30個</p>
+                    <div class="class-detail-content-lesson-header-item-wrapper g-flex-wrapper g-flex-align-start">
+                      <div class="class-detail-content-lesson-header-item">
+                        <p class="class-detail-content-lesson-header-item-title">單元</p>
+                        <p class="class-detail-content-lesson-header-item-content">30個</p>
+                      </div>
+                      <div class="class-detail-content-lesson-header-item">
+                        <p class="class-detail-content-lesson-header-item-title">課程總長</p>
+                        <p class="class-detail-content-lesson-header-item-content">480分鐘</p>
+                      </div>
+                      <div class="class-detail-content-lesson-header-item">
+                        <p class="class-detail-content-lesson-header-item-title">觀看期限</p>
+                        <p class="class-detail-content-lesson-header-item-content">永久觀看</p>
+                      </div>
                     </div>
-                    <div class="class-detail-content-lesson-header-item">
-                      <p class="class-detail-content-lesson-header-item-title">課程總長</p>
-                      <p class="class-detail-content-lesson-header-item-content">480分鐘</p>
-                    </div>
-                    <div class="class-detail-content-lesson-header-item">
-                      <p class="class-detail-content-lesson-header-item-title">觀看期限</p>
-                      <p class="class-detail-content-lesson-header-item-content">永久觀看</p>
+                    <div class="class-detail-content-lesson-header-notice">
+                      <p class="class-detail-content-lesson-header-notice-title">教師提醒</p>
+                      <div class="class-detail-content-lesson-header-notice-content">
+                        <!-- {編輯器開始} -->
+                        <p style="line-height: 30px; font-size: 16px;">1. 自行購買食材廚具<br>2. 搭配教學講義學習，<a href="" title="下載教學講義" download>下載教學講義</a></p><!-- {編輯器結束} -->
+                      </div>
                     </div>
                   </div>
                   <div class="class-detail-content-lesson-content">
                     <p class="class-detail-content-lesson-content-subject">第一章、基本食材介紹</p>
-                    <ul class="class-detail-content-lesson-content-list reset">
-                      <li>1 講師介紹</li>
-                      <li>2 工具、食材介紹</li>
-                      <li>3 進階工具</li>
-                    </ul>
+                    <table class="class-detail-content-lesson-content-list-table">
+                      <colgroup>
+                        <col style="width: 25px;">
+                        <col>
+                        <col style="width: 60px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <th scope="col">播放</th>
+                          <th scope="col">時間進度</th>
+                          <th scope="col">進度</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1</td>
+                          <th scope="row">講師介紹</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>01:03</td>
+                          <td><span class="status completed">已完成</span></td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <th scope="row">工具、食材介紹</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>10:25</td>
+                          <td><span class="status recent">最後觀看</span></td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <th scope="row">進階工具</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>15:35</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="class-detail-content-lesson-content-index"><button class="switch">展開索引<i class="fas fa-chevron-down"></i></button>
+                      <div class="class-detail-content-lesson-content-index-inner">
+                        <div class="class-detail-content-lesson-content-index-block">
+                          <p class="class-detail-content-lesson-content-index-title">1 講師介紹</p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>01:08</span><a title="自我介紹">自我介紹</a></p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>03:21</span><a title="課程介紹">課程介紹</a></p>
+                        </div>
+                        <div class="class-detail-content-lesson-content-index-block">
+                          <p class="class-detail-content-lesson-content-index-title">2 工具、食材介紹</p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>01:08</span><a title="選用食材">選用食材</a></p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>03:21</span><a title="選用工具">選用工具</a></p>
+                        </div>
+                      </div>
+                    </div>
                     <p class="class-detail-content-lesson-content-subject">第二章、湯種法吐司麵團與應用</p>
-                    <ul class="class-detail-content-lesson-content-list reset">
-                      <li>4 湯種法介紹與麵團製作</li>
-                      <li>5 湯種溫泉吐司：帶蓋</li>
-                      <li>6 湯種溫泉吐司：不帶蓋</li>
-                    </ul>
+                    <table class="class-detail-content-lesson-content-list-table">
+                      <colgroup>
+                        <col style="width: 25px;">
+                        <col>
+                        <col style="width: 60px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <th scope="col">播放</th>
+                          <th scope="col">時間進度</th>
+                          <th scope="col">進度</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>4</td>
+                          <th scope="row">湯種法介紹與麵團製作</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>01:03</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <th scope="row">湯種溫泉吐司：帶蓋</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>10:25</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <th scope="row">湯種溫泉吐司：不帶蓋</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>15:35</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="class-detail-content-lesson-content-index"><button class="switch">展開索引<i class="fas fa-chevron-down"></i></button>
+                      <div class="class-detail-content-lesson-content-index-inner">
+                        <div class="class-detail-content-lesson-content-index-block">
+                          <p class="class-detail-content-lesson-content-index-title">1 講師介紹</p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>01:08</span><a title="自我介紹">自我介紹</a></p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>03:21</span><a title="課程介紹">課程介紹</a></p>
+                        </div>
+                        <div class="class-detail-content-lesson-content-index-block">
+                          <p class="class-detail-content-lesson-content-index-title">2 工具、食材介紹</p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>01:08</span><a title="選用食材">選用食材</a></p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>03:21</span><a title="選用工具">選用工具</a></p>
+                        </div>
+                      </div>
+                    </div>
                     <p class="class-detail-content-lesson-content-subject">第三章、鹹香好滋味：餡料吐司</p>
-                    <ul class="class-detail-content-lesson-content-list reset">
-                      <li>7 老麵法的介紹</li>
-                      <li>8 可頌麵團製作與運用</li>
-                      <li>9 丹麥麵團製作與運用</li>
-                      <li>10 維也納麵團系列－可頌與丹麥冷藏熟成麵團介紹及應用</li>
-                    </ul>
+                    <table class="class-detail-content-lesson-content-list-table">
+                      <colgroup>
+                        <col style="width: 25px;">
+                        <col>
+                        <col style="width: 60px;">
+                        <col style="width: 100px;">
+                        <col style="width: 100px;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <td></td>
+                          <td></td>
+                          <th scope="col">播放</th>
+                          <th scope="col">時間進度</th>
+                          <th scope="col">進度</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>7</td>
+                          <th scope="row">老麵法的介紹</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>01:03</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <th scope="row">可頌麵團製作與運用</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>10:25</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <th scope="row">丹麥麵團製作與運用</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>15:35</td>
+                          <td></td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <th scope="row">維也納麵團系列－可頌與丹麥冷藏熟成麵團介紹及應用</th>
+                          <td><button class="play"><i class="fas fa-play"></i></button></td>
+                          <td>15:35</td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    <div class="class-detail-content-lesson-content-index"><button class="switch">展開索引<i class="fas fa-chevron-down"></i></button>
+                      <div class="class-detail-content-lesson-content-index-inner">
+                        <div class="class-detail-content-lesson-content-index-block">
+                          <p class="class-detail-content-lesson-content-index-title">1 講師介紹</p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>01:08</span><a title="自我介紹">自我介紹</a></p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>03:21</span><a title="課程介紹">課程介紹</a></p>
+                        </div>
+                        <div class="class-detail-content-lesson-content-index-block">
+                          <p class="class-detail-content-lesson-content-index-title">2 工具、食材介紹</p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>01:08</span><a title="選用食材">選用食材</a></p>
+                          <p class="class-detail-content-lesson-content-index-linegroup g-flex-wrapper g-flex-align-start"><span>03:21</span><a title="選用工具">選用工具</a></p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -128,9 +300,14 @@
               <div class="class-detail-content-section-tabpane" data-target="discuss">
                 <div class="class-detail-content-discuss-wrapper">
                   <div class="class-detail-content-discuss">
-                    <p class="class-detail-content-discuss-title">想與您的老師或同學討論課程嗎</p>
-                    <p class="class-detail-content-discuss-desc">這裡是學習課程的討論專區，會有老師及學員一同互動，請先<a href="" title="登入">登入</a>或<a href="class_purchase.html" title="購買課程">購買課程</a>以使用此功能！</p>
-                    <div class="class-detail-content-discuss-option g-flex-wrapper g-flex-align-center g-flex-justify-center"><a class="login" href="" title="登入帳號">登入帳號</a><a class="buy" href="class_purchase.html" title="購買課程">購買課程</a></div>
+                    <p class="class-detail-content-discuss-title">注意事項</p>
+                    <ol class="class-detail-content-discuss-notice">
+                      <li>申請加入討論區請填入俏課的訂單編號</li>
+                      <li>一組訂單編號僅提供一個FB帳號使用</li>
+                    </ol>
+                    <p class="class-detail-content-discuss-desc order">P.S. 如申請後三個工作天沒被加入社團，請私訊粉專管理員，我們將盡快協助您</p>
+                    <div class="class-detail-content-discuss-order-no-wrapper"><input id="class-detail-content-discuss-order-no" value="20210621215604632" readonly><span>已複製訂單編號</span></div>
+                    <p class="class-detail-content-discuss-desc order">請點擊複製您的訂單編號</p><a class="class-detail-content-discuss-link" href="" target="_blacnk" title="前往課程FB專屬討論區">前往課程FB專屬討論區</a>
                   </div>
                 </div>
               </div>
@@ -379,6 +556,6 @@
   <script src="assets/js/Bootstrap/bootstrap-3.3.7.min.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/flickity.pkgd.min.js"></script>
-  <script src="assets/js/class.js"></script>
+  <script src="assets/js/orderdetail.js"></script>
 </body>
 </html>

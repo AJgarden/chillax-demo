@@ -52,7 +52,7 @@ body { width: 100%; line-height: 1.5; font-size: 1rem; font-family: sans-serif; 
 
 .g-flex-justify-space-around { justify-content: space-around; }
 
-.dropdown .btn { display: block; position: relative; min-width: 240px; height: 42px; line-height: 1.5; font-size: 1rem; color: #666666 !important; border-color: #e1e1e1; background: #ffffff !important; border-radius: 0; text-align: left; padding: 8px 38px 8px 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; outline: none; transition: border 0.3s, background 0.3s; }
+.dropdown .btn { display: block; position: relative; min-width: 240px; height: 42px; line-height: 1.5; font-size: 1rem; color: #666666 !important; border-color: #e1e1e1; background: #ffffff !important; border-radius: 0; box-shadow: none !important; text-align: left; padding: 8px 38px 8px 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; outline: none !important; transition: border 0.3s, background 0.3s; }
 
 .dropdown .btn .caret { display: block; position: absolute; border-top: 8px solid #000000; border-left: 5px solid transparent; border-right: 5px solid transparent; top: 50%; right: 16px; margin-top: -4px; transform-origin: center 4px; transition: transform 0.3s; }
 
@@ -71,3 +71,5 @@ body { width: 100%; line-height: 1.5; font-size: 1rem; font-family: sans-serif; 
 .dropdown .dropdown-menu > li > a:hover { background: rgba(204, 142, 103, 0.1); }
 
 .dropdown .dropdown-menu > li.active > a { color: #ffffff; background: #cc8e67; }
+
+.another-version { display: block; position: fixed; z-index: 9999; font-size: 1rem; color: #000000; border: 1px solid #000000; background: #ffffff; border-radius: 10px; padding: 10px 15px; top: 50%; right: 10px; opacity: 0.8; transform: translateY(-50%); }

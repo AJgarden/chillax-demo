@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>chillax</title>
+  <meta charset="utf-8">
+  <meta content="initial-scale=1.0, width=device-width" name="viewport">
+  <meta name="keywords" content="chillax">
+  <meta name="description" content="chillax">
+  <link href="favicon.ico" rel="icon">
+  <link href="favicon.ico" rel="shortcut icon">
+  <link href="apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/css/bootstrap-3.3.7.min.css" rel="stylesheet">
+  <link href="assets/css/fontawesome-5.4.1-all.min.css" rel="stylesheet">
+  <link href="assets/css/main.min.css" rel="stylesheet">
+  <link href="assets/css/custom.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+<script src="assets/js/html5shiv-3.7.3.min.js"></script>
+<script src="assets/js/respond-1.4.2.min.js"></script>
+<![endif]-->
+  <link href="assets/css/cropper.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="g-page-wrapper">
+    <header class="header">
+      <div class="header-wrapper g-flex-wrapper g-flex-align-center g-flex-justify-space-between">
+        <h1 class="header-logo"><a href="/" title="chillax"><img src="assets/images/header-logo.png" alt="chillax"></a></h1>
+        <nav class="header-nav g-flex-wrapper g-flex-align-center"><a class="header-nav-item g-flex-wrapper g-flex-align-center" href="class_list.html" title="線上課程"><span class="header-nav-item-icon"><img src="assets/images/header-icon-lesson.png" alt=""></span><span class="header-nav-item-text">線上課程</span></a><a class="header-nav-item g-flex-wrapper g-flex-align-center" href="" title="我的課程"><span class="header-nav-item-icon"><img src="assets/images/header-icon-member.png" alt=""></span><span class="header-nav-item-text">我的課程</span></a>
+          <div class="dropdown"><button class="btn btn-default dropdown-toggle" type="button" id="account-login" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"><img src="assets/images/del/d-account-image.jpg" alt=""><span class="caret"></span></button>
+            <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="account-login">
+              <li class="active"><a href="#" title="帳號設定">帳號設定</a></li>
+              <li><a href="#" title="我的課程">我的課程</a></li>
+              <li><a href="#" title="登出">登出</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="header-scroll-dispatcher"></div>
+    </header>
+    <div class="account-inner">
+      <div class="account-setup-wrapper">
+        <h2 class="account-setup-subject">帳戶設定</h2>
+        <div class="account-setup-content g-flex-wrapper g-flex-align-start">
+          <div class="account-setup-left">
+            <div class="account-setup-image-display"><img id="account-setup-image" src="assets/images/del/d-account-image.jpg" alt=""><button class="account-setup-image-upload">上傳</button></div>
+            <div class="account-setup-image-uploader hide"><input id="account-setup-image-uploader-input" type="file" accept="image/*"><button id="account-setup-image-uploader-button" data-toggle="modal" data-target="#account-setup-image-cropper"></button></div>
+          </div>
+          <div class="account-setup-right">
+            <form class="account-setup-form">
+              <p class="account-setup-title" style="color: #ed6941;">一般會員</p><label class="account-setup-input-group g-flex-wrapper g-flex-align-center">
+                <p class="account-setup-input-title">名稱</p><input class="account-setup-input-field" name="name" value="陳木星">
+              </label><label class="account-setup-input-group g-flex-wrapper g-flex-align-center">
+                <p class="account-setup-input-title">信箱</p><input class="account-setup-input-field" type="email" name="email" value="abcde@gmail.com">
+              </label><label class="account-setup-input-group g-flex-wrapper g-flex-align-center">
+                <p class="account-setup-input-title">密碼</p><input class="account-setup-input-field" type="password" name="password" placeholder="更新密碼">
+              </label><label class="account-setup-input-group g-flex-wrapper g-flex-align-center">
+                <p class="account-setup-input-title"></p><input class="account-setup-input-field" type="password" name="password_confirm" placeholder="重複確認">
+              </label><label class="account-setup-input-group g-flex-wrapper g-flex-align-center">
+                <p class="account-setup-input-title">電話</p><input class="account-setup-input-field" type="tel" name="phone" value="0987654321">
+              </label>
+              <div class="account-setup-third-block">
+                <p class="account-setup-title">登入方式</p>
+                <div class="account-setup-third-item g-flex-inline-wrapper g-flex-align-end"><img src="assets/images/account-setup-fb.png" alt=""><span>陳木星</span><a href="" title="取消綁定">取消綁定</a></div>
+                <div class="account-setup-third-item g-flex-inline-wrapper g-flex-align-end"><img src="assets/images/account-setup-gg.png" alt=""><span>尚未連結</span><a href="" title="連結">連結</a></div>
+              </div>
+              <div class="account-setup-button g-flex-wrapper g-flex-align-center"><button class="submit" type="submit">儲存更改</button><button class="reset" type="reset">取消</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="account-setup-image-cropper" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <p class="modal-title">編輯圖片</p>
+            </div>
+            <div class="modal-body">
+              <div id="cropper-wrapper"><img id="cropper-image" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==" alt=""></div>
+            </div>
+            <div class="modal-footer g-flex-wrapper g-flex-align-center g-flex-justify-end"><button class="save" id="cropper-save" type="button">儲存</button><button class="cancel" type="button" data-dismiss="modal">取消</button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content-wrapper">
+        <div class="footer-content g-flex-wrapper g-flex-align-start"><a class="footer-content-logo" href="/"><img src="assets/images/header-logo.png" alt=""></a>
+          <div class="footer-content-menu g-flex-wrapper g-flex-align-start">
+            <div class="footer-content-menu-item"><a href="/" title="首頁">首頁</a></div>
+            <div class="footer-content-menu-item"><a href="news_list.html" title="最新消息">最新消息</a></div>
+            <div class="footer-content-menu-item"><a href="class_list.html" title="線上課程">線上課程</a></div>
+            <div class="footer-content-menu-item"><a href="" title="會員專區">會員專區</a></div>
+            <div class="footer-content-menu-item"><a href="" title="關於我們">關於我們</a></div>
+            <div class="footer-content-menu-break"></div>
+            <div class="footer-content-menu-item space"></div>
+            <div class="footer-content-menu-item"><a href="" title="合作夥伴">合作夥伴</a></div>
+            <div class="footer-content-menu-item"><a href="" title="版權宣告">版權宣告</a></div>
+            <div class="footer-content-menu-item"><a href="" title="常見問題">常見問題</a></div>
+            <div class="footer-content-menu-item"><a href="" title="客服專區">客服專區</a></div>
+          </div>
+          <div class="footer-content-follow g-flex-inline-wrapper g-flex-align-start"><span>Follow Us</span><a href="" title="Facebook"><i class="fab fa-facebook-f"></i></a><a href="" title="Youtube"><i class="fab fa-youtube"></i></a><a href="" title="Instagram"><i class="fab fa-instagram"></i></a></div><button class="footer-content-gotop"><span>返回置頂</span><span class="ghost"></span></button>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>&copy; 2021 卡麥拉影像文創有限公司 ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer><a class="another-version" href="account_setup_lecturer.html" title="此頁有任課教師版本">此頁有任課教師版本</a>
+  </div>
+  <script src="assets/js/mobiledetect-1.4.2.min.js"></script>
+  <!--[if lt IE 9]><script src="assets/js/jQuery/jquery-1.12.4.min.js"></script><![endif]-->
+  <!--[if gte IE 9]><!-->
+  <script src="assets/js/jQuery/jquery-2.2.4.min.js"></script>
+  <!--<![endif]-->
+  <script src="assets/js/jQuery/jquery.mobile-1.4.5.custom.min.js"></script>
+  <script src="assets/js/jQuery/jquery.lazy-1.7.9.min.js"></script>
+  <script src="assets/js/jQuery/jquery.easing-1.4.1.min.js"></script>
+  <script src="assets/js/jQuery/jquery.scrollview-1.7.min.js"></script>
+  <script src="assets/js/Bootstrap/bootstrap-3.3.7.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cropper.min.js"></script>
+  <script src="assets/js/accountsetup.js"></script>
+</body>
+</html>
