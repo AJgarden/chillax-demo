@@ -885,6 +885,8 @@
 
 .class-detail-content .class-detail-content-section .class-detail-content-section-header .class-detail-content-section-tab .class-detail-content-section-tab-item:hover { background: #959595; }
 
+.class-detail-content .class-detail-content-section .class-detail-content-section-header.logged .class-detail-content-section-tab { width: 100%; }
+
 .class-detail-content .class-detail-content-section .class-detail-content-section-header .class-detail-content-section-buy { display: block; width: 25%; line-height: 46px; font-size: 1.25rem; color: #ffffff; background: #cc8e67; text-align: center; transition: background 0.3s, opacity 0.3s, transform 0s; }
 
 .class-detail-content .class-detail-content-section .class-detail-content-section-header .class-detail-content-section-buy:hover { background: rgba(204, 142, 103, 0.7); }
@@ -1030,8 +1032,6 @@
 .class-detail-content .class-detail-content-section .class-detail-content-discuss-wrapper .class-detail-content-discuss .class-detail-content-discuss-option > a.buy { background: #cc8e67; }
 
 .class-detail-content .class-detail-content-section .class-detail-content-discuss-wrapper .class-detail-content-discuss .class-detail-content-discuss-option > a.buy:hover { background: rgba(204, 142, 103, 0.7); }
-
-.class-detail-content .class-detail-content-section.logged .class-detail-content-section-header .class-detail-content-section-tab { width: 100%; }
 
 .class-detail-content .class-detail-content-section.logged .class-detail-content-section-tabpane-wrapper { position: relative; overflow: hidden; }
 

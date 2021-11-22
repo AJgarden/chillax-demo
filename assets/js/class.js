@@ -6,11 +6,17 @@ $(function () {
   var section = $('.class-detail-content-section');
   var sectionHeader = $('.class-detail-content-section-header');
   var sectionTab = $('.class-detail-content-section-tab-item');
+  var sectionPaneWrapper = $('.class-detail-content-section-tabpane-wrapper');
+  var sectionPane = $('.class-detail-content-section-tabpane');
   sectionTab.on('click', function () {
     var target = $(this).attr('data-anchor');
+    sectionTab.removeClass('active');
+    $(this).addClass('active');
     var targetPane = $(".class-detail-content-section-tabpane[data-target=\"".concat(target, "\"]"));
+    sectionPane.removeClass('active');
+    targetPane.addClass('active');
     $('html, body').animate({
-      scrollTop: targetPane.offset().top - header.outerHeight() - sectionHeader.outerHeight()
+      scrollTop: sectionPaneWrapper.offset().top - header.outerHeight() - sectionHeader.outerHeight()
     }, 800, 'easeOutExpo');
   });
   $(window).on('scroll mousewheel', function (event) {
@@ -24,7 +30,33 @@ $(function () {
   }).trigger('scroll');
   $(window).on('resize', function () {
     $(this).trigger('scroll');
-  }); // recommend carousel
+  }); // const header = $('.header')
+  // const section = $('.class-detail-content-section')
+  // const sectionHeader = $('.class-detail-content-section-header')
+  // const sectionTab = $('.class-detail-content-section-tab-item')
+  // sectionTab.on('click', function () {
+  //   const target = $(this).attr('data-anchor')
+  //   const targetPane = $(`.class-detail-content-section-tabpane[data-target="${target}"]`)
+  //   $('html, body').animate(
+  //     { scrollTop: targetPane.offset().top - header.outerHeight() - sectionHeader.outerHeight() },
+  //     800,
+  //     'easeOutExpo'
+  //   )
+  // })
+  // $(window)
+  //   .on('scroll mousewheel', function (event) {
+  //     const sctop = $(window).scrollTop()
+  //     if (sctop > section.offset().top - header.outerHeight() && header.hasClass('scroll-view')) {
+  //       sectionHeader.addClass('scroll-view')
+  //     } else {
+  //       sectionHeader.removeClass('scroll-view')
+  //     }
+  //   })
+  //   .trigger('scroll')
+  // $(window).on('resize', function () {
+  //   $(this).trigger('scroll')
+  // })
+  // recommend carousel
 
   var recommendArrowPrev = $('.class-recommend-arrow.prev');
   var recommendArrowNext = $('.class-recommend-arrow.next');

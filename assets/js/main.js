@@ -33,13 +33,19 @@ goTop.on('click', function () {
     scrollTop: 0
   }, 2000, 'easeOutExpo');
 });
-goTop.scrollView({
-  start: window.innerHeight / 2,
-  end: '.footer-content-gotop',
-  endKey: 'top',
-  threshold: 0,
-  repeat: true
-}); // tooltip
+$(window).on('resize', function () {
+  if (document.body.scrollHeight > window.innerHeight * 3 && !goTop.attr('data-scroll-view')) {
+    goTop.scrollView({
+      start: window.innerHeight / 2,
+      end: '.footer-content-gotop',
+      endKey: 'top',
+      threshold: 0,
+      repeat: true
+    });
+  } else if (document.body.scrollHeight <= window.innerHeight * 3 && goTop.attr('data-scroll-view')) {
+    goTop.scrollView('destory');
+  }
+}).trigger('resize'); // tooltip
 
 $('[data-toggle="tooltip"]').tooltip(); // demo validation
 
