@@ -22,13 +22,13 @@ html { font-size: 16px; }
 
 body { width: 100%; line-height: 1.5; font-size: 1rem; font-family: sans-serif; overflow-x: hidden; }
 
-.g-page-wrapper { position: relative; background: #f7f6f5; padding-top: 204px; overflow: hidden; }
+.g-page-wrapper { position: relative; max-width: 1920px; margin: auto; background: #f7f6f5; padding-top: 204px; overflow: hidden; }
 
 @media (min-width: 1281px) and (max-width: 1680px) { .g-page-wrapper { padding-top: 180px; } }
 
 @media (min-width: 1024px) and (max-width: 1280px) { .g-page-wrapper { padding-top: 160px; } }
 
-@media (max-width: 1023px) { .g-page-wrapper { padding-top: 68px; } }
+@media (max-width: 1023px) { .g-page-wrapper { padding-top: 62px; } }
 
 .g-flex-wrapper { display: flex; flex-wrap: wrap; }
 
