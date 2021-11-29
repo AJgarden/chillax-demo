@@ -30,7 +30,8 @@ $(function () {
   }).trigger('scroll');
   $(window).on('resize', function () {
     $(this).trigger('scroll');
-  }); // lesson index
+    sectionHeader.css('max-width', section.outerWidth());
+  }).trigger('resize'); // lesson index
 
   var lessonSwitcher = $('.class-detail-content-lesson-content-index > .switch');
   lessonSwitcher.on('click', function () {
