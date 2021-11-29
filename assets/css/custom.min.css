@@ -1577,7 +1577,7 @@
 
 #account-setup-image-cropper .modal-footer button.cancel:hover { background: #707070; }
 
-.account-order-list-inner { padding: 120px 100px 0; }
+.account-order-list-inner { max-width: 1920px; margin: auto; padding: 120px 100px 0; }
 
 @media (min-width: 1024px) and (max-width: 1439px) { .account-order-list-inner { padding: 60px 60px 0; } }
 
