@@ -22,7 +22,7 @@ html { font-size: 16px; }
 
 body { width: 100%; line-height: 1.5; font-size: 1rem; font-family: sans-serif; overflow-x: hidden; }
 
-.g-page-wrapper { position: relative; max-width: 1920px; margin: auto; background: #f7f6f5; padding-top: 204px; overflow: hidden; }
+.g-page-wrapper { position: relative; background: #f7f6f5; padding-top: 204px; overflow: hidden; }
 
 @media (min-width: 1281px) and (max-width: 1680px) { .g-page-wrapper { padding-top: 180px; } }
 
@@ -73,3 +73,5 @@ body { width: 100%; line-height: 1.5; font-size: 1rem; font-family: sans-serif; 
 .dropdown .dropdown-menu > li.active > a { color: #ffffff; background: #cc8e67; }
 
 .another-version { display: block; position: fixed; z-index: 9999; font-size: 1rem; color: #000000; border: 1px solid #000000; background: #ffffff; border-radius: 10px; padding: 10px 15px; top: 50%; right: 10px; opacity: 0.8; transform: translateY(-50%); }
+
+.g-editor img { max-width: 100%; }

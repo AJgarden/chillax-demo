@@ -30,7 +30,8 @@ $(function () {
   }).trigger('scroll');
   $(window).on('resize', function () {
     $(this).trigger('scroll');
-  }); // const header = $('.header')
+    sectionHeader.css('max-width', section.outerWidth());
+  }).trigger('resize'); // const header = $('.header')
   // const section = $('.class-detail-content-section')
   // const sectionHeader = $('.class-detail-content-section-header')
   // const sectionTab = $('.class-detail-content-section-tab-item')
