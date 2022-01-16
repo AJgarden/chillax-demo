@@ -330,7 +330,9 @@
 
 @media (max-width: 1023px) { .index-classes .index-classes-list .index-classes-item > a .index-classes-item-tag { font-size: 1rem; padding: 4px 10px; top: 15px; right: 30px; } }
 
-.index-classes .index-classes-list .index-classes-item > a .index-classes-item-img img { display: block; width: 100%; }
+.index-classes .index-classes-list .index-classes-item > a .index-classes-item-img { position: relative; height: 0; padding-bottom: 66.666%; overflow: hidden; }
+
+.index-classes .index-classes-list .index-classes-item > a .index-classes-item-img img { display: block; position: absolute; width: 100% !important; height: auto !important; top: 0; left: 0; }
 
 .index-classes .index-classes-list .index-classes-item > a .index-classes-item-title { font-size: 1.5rem; color: #000000; margin: 15px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -471,9 +473,9 @@
 @media (max-width: 1023px) { .index-extend .index-extend-list .index-extend-item { width: 100%; padding: 0; margin-bottom: 30px; }
   .index-extend .index-extend-list .index-extend-item:nth-child(n+4) { display: none; } }
 
-.index-extend .index-extend-list .index-extend-item .index-extend-item-img { position: relative; }
+.index-extend .index-extend-list .index-extend-item .index-extend-item-img { position: relative; height: 0; padding-bottom: 66.57%; overflow: hidden; }
 
-.index-extend .index-extend-list .index-extend-item .index-extend-item-img img { display: block; width: 100%; }
+.index-extend .index-extend-list .index-extend-item .index-extend-item-img img { display: block; position: absolute; width: 100% !important; height: auto !important; top: 0; left: 0; }
 
 .index-extend .index-extend-list .index-extend-item .index-extend-item-title { font-size: 1.5rem; font-weight: bold; color: #cc8e67; margin: 18px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -576,7 +578,9 @@
 
 @media (max-width: 1023px) { .list-news .list-news-item { width: 100%; padding: 0 0 30px; } }
 
-.list-news .list-news-item .list-news-item-img img { display: block; width: 100%; }
+.list-news .list-news-item .list-news-item-img { position: relative; height: 0; padding-bottom: 66.66%; overflow: hidden; }
+
+.list-news .list-news-item .list-news-item-img img { display: block; position: absolute; width: 100% !important; height: auto !important; top: 0; left: 0; }
 
 .list-news .list-news-item .list-news-item-title { font-size: 1.5rem; font-weight: bold; color: #cc8e67; margin: 18px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -622,7 +626,9 @@
 
 @media (max-width: 1023px) { .list-class .list-class-item > a .list-class-item-tag { font-size: 1rem; padding: 4px 10px; top: 15px; right: 15px; } }
 
-.list-class .list-class-item > a .list-class-item-img img { display: block; width: 100%; }
+.list-class .list-class-item > a .list-class-item-img { position: relative; height: 0; padding-bottom: 66.66%; overflow: hidden; }
+
+.list-class .list-class-item > a .list-class-item-img img { display: block; position: absolute; width: 100% !important; height: auto !important; top: 0; left: 0; }
 
 .list-class .list-class-item > a .list-class-item-title { font-size: 1.5rem; color: #000000; margin: 15px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -821,9 +827,9 @@
 @media (max-width: 1023px) { .news-detail-extend .news-detail-extend-list-wrapper .news-detail-extend-item { width: 100%; padding: 0; margin-bottom: 30px; }
   .news-detail-extend .news-detail-extend-list-wrapper .news-detail-extend-item:nth-child(n+4) { display: none; } }
 
-.news-detail-extend .news-detail-extend-list-wrapper .news-detail-extend-item .news-detail-extend-item-img { position: relative; }
+.news-detail-extend .news-detail-extend-list-wrapper .news-detail-extend-item .news-detail-extend-item-img { position: relative; height: 0; padding-bottom: 66.76%; overflow: hidden; }
 
-.news-detail-extend .news-detail-extend-list-wrapper .news-detail-extend-item .news-detail-extend-item-img img { display: block; width: 100%; }
+.news-detail-extend .news-detail-extend-list-wrapper .news-detail-extend-item .news-detail-extend-item-img img { display: block; position: absolute; width: 100% !important; height: auto !important; top: 0; left: 0; }
 
 .news-detail-extend .news-detail-extend-list-wrapper .news-detail-extend-item .news-detail-extend-item-title { font-size: 1.5rem; font-weight: bold; color: #cc8e67; margin: 18px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -1212,7 +1218,9 @@
 
 @media (max-width: 1023px) { .class-recommend .class-recommend-list-wrapper .class-recommend-item > a .class-recommend-item-tag { font-size: 1rem; padding: 4px 10px; top: 15px; right: 15px; } }
 
-.class-recommend .class-recommend-list-wrapper .class-recommend-item > a .class-recommend-item-img img { display: block; width: 100%; }
+.class-recommend .class-recommend-list-wrapper .class-recommend-item > a .class-recommend-item-img { position: relative; height: 0; padding-bottom: 66.66%; overflow: hidden; }
+
+.class-recommend .class-recommend-list-wrapper .class-recommend-item > a .class-recommend-item-img img { display: block; position: absolute; width: 100% !important; height: auto !important; top: 0; left: 0; }
 
 .class-recommend .class-recommend-list-wrapper .class-recommend-item > a .class-recommend-item-title { font-size: 1.5rem; color: #000000; margin: 15px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
@@ -1624,7 +1632,9 @@
 
 @media (max-width: 1023px) { .account-order-list .account-order-item > a .account-order-item-tag { font-size: 1rem; padding: 4px 10px; top: 15px; right: 30px; } }
 
-.account-order-list .account-order-item > a .account-order-item-img img { display: block; width: 100%; }
+.account-order-list .account-order-item > a .account-order-item-img { position: relative; height: 0; padding-bottom: 66.66%; overflow: hidden; }
+
+.account-order-list .account-order-item > a .account-order-item-img img { display: block; position: absolute; width: 100% !important; height: auto !important; top: 0; left: 0; }
 
 .account-order-list .account-order-item > a .account-order-item-title { font-size: 1.5rem; color: #000000; margin: 15px 0 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
